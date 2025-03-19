@@ -1,0 +1,175 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    color: #4a4a4a;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 40px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+
+.facebook:hover {
+    color: #1877F2;
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+}
+
+.linkedin:hover {
+    color: #0077B5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.content {
+    max-width: 500px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.dynamic-text {
+    color: #ff8c42;
+    
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: bottom;
+    height: 40px;
+}
+
+.dynamic-text::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.cta {
+    background-color: #2f54eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #1a3d8f;
+   
+}
+
+.app-icons img {
+    height: 40px;
+    margin: 0 10px;
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 2px;
+}
+
+.image-carousel img {
+    width: 100%;
+    display: none;
+}
+
+.image-carousel img.active {
+    display: block;
+    animation: fade 6s infinite;
+}
+
+@keyframes fade {
+
+    0%,
+    33% {
+        opacity: 1;
+    }
+
+    33.33%,
+    66.66% {
+        opacity: 0;
+    }
+
+    66.67%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 50px;
+        text-align: left;
+    }
+
+    .content {
+        max-width: 40%;
+        margin-bottom: 0;
+       
+    }
+
+    .image-carousel {
+        max-width: 50%;
+    }
+}

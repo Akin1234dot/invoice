@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Management System</title>
+    <link rel="stylesheet" href="invoices.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="invoice-icon.svg" alt="Invoice Icon" />
+        </div>
+      </div>
+
+      <div class="menu-items">
+        <div class="menu-btn primary-btn">
+          <i class="icon-plus"></i>
+          <span>New Invoice</span>
+        </div>
+
+        <div class="menu-list">
+          <div class="menu-item active">
+            <i class="icon-invoice"></i>
+            <span>Invoices</span>
+          </div>
+
+          <div class="menu-item">
+            <i class="icon-quotation"></i>
+            <span>Quatations</span>
+          </div>
+
+          <div class="menu-item">
+            <i class="icon-clients"></i>
+            <span>Clients</span>
+          </div>
+
+          <div class="menu-item">
+            <i class="icon-products"></i>
+            <span>Products</span>
+          </div>
+        </div>
+
+        <div class="bottom-menu">
+          <div class="menu-item">
+            <i class="icon-profile"></i>
+            <span>Profile</span>
+          </div>
+
+          <div class="menu-item">
+            <i class="icon-logout"></i>
+            <span>Logout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h1>Invoices</h1>
+        <div class="user-profile">
+          <img src="profile-pic.jpg" alt="Profile Picture" />
+          <span>King Don</span>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button class="search-btn">
+          <i class="icon-search"></i>
+        </button>
+      </div>
+
+      <div class="table-container">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th class="sortable">Name <i class="icon-sort"></i></th>
+              <th>Payment Status</th>
+              <th>Client</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BOY1</td>
+              <td>Purchase of iphone 13</td>
+              <td><span class="status-badge paid">Paid Cash</span></td>
+              <td>Doe John</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <div class="rows-per-page">
+          <span>Rows Per Page</span>
+          <div class="select-container">
+            <select id="rowsPerPage">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+            <i class="icon-dropdown"></i>
+          </div>
+        </div>
+
+        <div class="page-info">
+          <span>1-1 of 1</span>
+        </div>
+
+        <div class="page-controls">
+          <button class="page-btn prev" disabled>
+            <i class="icon-prev"></i>
+          </button>
+          <button class="page-btn next" disabled>
+            <i class="icon-next"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="invoices.js"></script>
+  </body>
+</html>
